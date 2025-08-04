@@ -2,8 +2,6 @@
 
 This repository contains an R script for conducting survival analysis on **TCGA-COAD (colon adenocarcinoma)** patients based on the expression of the **PRKCZ** gene. The analysis uses publicly available clinical and RNA-Seq data from the [GDC Data Portal](https://portal.gdc.cancer.gov/), accessed via the `TCGAbiolinks` package.
 
-## 📦 Requirements
-
 📈 Statistical Test
 
 survdiff(Surv(overall_survival, deceased) ~ strata, data = coad_PRKCZ)
@@ -13,6 +11,7 @@ You can easily modify the script to perform survival analysis for any gene:
 filter(gene_name == "YOUR_GENE")
 Just replace "PRKCZ" with your gene of interest.
 
+## 📦 Requirements
 
 Make sure you have the following R packages installed:
 
