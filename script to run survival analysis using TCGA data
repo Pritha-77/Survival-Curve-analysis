@@ -1,9 +1,7 @@
 
 setwd("D:/survivalAnalysis")
 
-#BiocManager::install("TCGAbiolinks")
-library(TCGAbiolinks)
-#remove.packages("TCGAbiolinks")
+
 
 #remotes::install_github("https://github.com/BioinformaticsFMRP/TCGAbiolinks",ref = "devel")
 #BiocManager::install("survminer")
