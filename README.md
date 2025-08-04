@@ -4,6 +4,16 @@ This repository contains an R script for conducting survival analysis on **TCGA-
 
 ## 📦 Requirements
 
+📈 Statistical Test
+
+survdiff(Surv(overall_survival, deceased) ~ strata, data = coad_PRKCZ)
+This performs a log-rank test comparing the survival distributions between the high- and low-expression groups.
+🧪 Customization
+You can easily modify the script to perform survival analysis for any gene:
+filter(gene_name == "YOUR_GENE")
+Just replace "PRKCZ" with your gene of interest.
+
+
 Make sure you have the following R packages installed:
 
 ```R
@@ -20,11 +30,6 @@ BiocManager::install(c("TCGAbiolinks", "SummarizedExperiment", "DESeq2"))
 6.	Merge clinical and expression data by TCGA barcodes.
 7.	Fit Kaplan-Meier survival curves and perform a log-rank test to assess significance.
 
-📈 Statistical Test
-survdiff(Surv(overall_survival, deceased) ~ strata, data = coad_PRKCZ)
-This performs a log-rank test comparing the survival distributions between the high- and low-expression groups.
-🧪 Customization
-You can easily modify the script to perform survival analysis for any gene:
-filter(gene_name == "YOUR_GENE")
-Just replace "PRKCZ" with your gene of interest.
+
+
 
